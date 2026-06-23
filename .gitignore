@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# Data and model artifacts
+Datasets/
+data/
+raw_data/
+runs/
+checkpoints/
+weights/
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.engine
+wandb/
+
+# Outputs
+results/*.jpg
+results/*.png
+results/*.csv
+
+# Local env
+.env

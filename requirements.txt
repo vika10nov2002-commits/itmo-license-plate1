@@ -1,0 +1,11 @@
+torch>=2.2
+torchvision>=0.17
+ultralytics>=8.2.0
+opencv-python>=4.8
+Pillow>=10.0
+PyYAML>=6.0
+numpy>=1.24
+tqdm>=4.66
+pandas>=2.0
+matplotlib>=3.8
+python-Levenshtein>=0.25; platform_system != 'Windows'

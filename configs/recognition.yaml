@@ -1,0 +1,36 @@
+# OCR config for cropped license plates.
+# For AutoRia dataset expected structure:
+# data_root/train/ann/*.json, data_root/train/img/*, data_root/test/ann/*.json, data_root/test/img/*
+
+data_root: /content/drive/MyDrive/Datasets/OCR/autoriaNumberplateOcrRu
+# Dataset formats: autoria_json or csv
+# For csv format put train_split: ocr_train and val_split: ocr_val; the loader expects <split>.csv.
+dataset_format: autoria_json
+train_split: train
+val_split: test
+
+# Russian plates usually use only Latin-looking letters: A B E K M H O P C T Y X + digits.
+# Use `full` if your labels contain all A-Z letters.
+alphabet: ru_plate
+# alphabet_path: /content/drive/MyDrive/Datasets/OCR/alphabet.txt
+
+architecture: small      # small is safer for coursework/small data; deep is heavier
+image_height: 32
+image_width: 128
+grayscale: true
+augment: true
+
+batch_size: 64
+epochs: 30
+learning_rate: 0.001
+weight_decay: 0.0001
+lr_patience: 3
+num_workers: 2
+seed: 42
+
+# For quick debugging uncomment:
+# max_train_samples: 200
+# max_test_samples: 100
+
+output_dir: checkpoints/recognition
+experiment_name: crnn_small_ru_plate

@@ -1,0 +1,26 @@
+
+data_root: /
+dataset_format: csv
+train_split: train
+val_split: val
+
+train_csv: /content/ocr_indexes/ocr_train.csv
+val_csv: /content/ocr_indexes/ocr_val.csv
+alphabet_path: /content/ocr_indexes/alphabet.txt
+
+architecture: small
+image_height: 32
+image_width: 128
+grayscale: true
+augment: false
+
+batch_size: 64
+epochs: 20
+learning_rate: 0.001
+weight_decay: 0.0001
+lr_patience: 3
+num_workers: 2
+seed: 42
+
+output_dir: checkpoints/recognition
+experiment_name: crnn_baseline_32x128_noaug
